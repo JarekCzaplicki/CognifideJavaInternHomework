@@ -1,6 +1,8 @@
 package spring;
 
+import json.CreateBookByISBN;
 import json.ReadJSON;
+import model.BookByISBN;
 import model.Books;
 import org.springframework.stereotype.Service;
 
@@ -16,4 +18,9 @@ public class BookService {
     public Books getAllBooks(){
         return books;
     }
+
+    public BookByISBN getBookByISBN(String isbn){
+        return CreateBookByISBN.bookByISBN(books, isbn);
+    }
+
 }
