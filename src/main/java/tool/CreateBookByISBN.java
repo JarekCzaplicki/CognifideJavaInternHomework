@@ -14,11 +14,6 @@ public class CreateBookByISBN {
 
         for (Item item : books.getItems()) {
             for (IndustryIdentifier industryIdentifier: item.getVolumeInfo().getIndustryIdentifiers()) {
-              System.out.println(industryIdentifier.getIdentifier().equals(isbn));
-              System.out.println(item.getID().equals(isbn));
-              System.out.println(isbn);
-              System.out.println(industryIdentifier.getIdentifier());
-              System.out.println(item.getID());
                 if(industryIdentifier.getIdentifier().equals(isbn) || item.getID().equals(isbn)){
                     bookByISBN.setIsbn(isbn);
                     bookByISBN.setTitle(item.getVolumeInfo().getTitle());
@@ -46,4 +41,6 @@ public class CreateBookByISBN {
         if(bookByISBN.getIsbn() == null) return null;
         else return bookByISBN;
     }
+
+
 }
