@@ -37,10 +37,4 @@ public class BookControler {
         System.out.println(book);
         return ResponseEntity.status(book == null ? HttpStatus.BAD_REQUEST : HttpStatus.OK).body(book);
     }
-
-//    @RequestMapping("/books/category/{category}")
-//    public ResponseEntity<BookByCategory> getBookByCategory(@PathVariable String category){
-//        List<BookByCategory> book = bookService.getBookByCategory(category);
-//        return ResponseEntity.status(book.isEmpty() == true ? HttpStatus.BAD_REQUEST : HttpStatus.OK).body(book);
-//    }
 }
