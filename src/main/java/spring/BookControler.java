@@ -1,5 +1,6 @@
 package spring;
 
+import model.AuthorRating;
 import model.BookByCategory;
 import model.BookByISBN;
 import model.Books;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.Null;
 import java.util.List;
 
 /**
@@ -29,6 +31,11 @@ public class BookControler {
     @RequestMapping("/books/category/{category}")
     public List<BookByCategory> getBookByCategory(@PathVariable String category){
         return bookService.getBookByCategory(category);
+    }
+
+    @RequestMapping("/books/rating")
+    public List<AuthorRating> getAuthorRating(){
+        return bookService.getAuthorRating();
     }
 
     @RequestMapping("/books/isbn/{isbn}")

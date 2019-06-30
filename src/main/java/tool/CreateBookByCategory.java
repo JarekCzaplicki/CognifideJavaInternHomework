@@ -2,6 +2,7 @@ package tool;
 
 import model.BookByCategory;
 import model.Books;
+import model.IndustryIdentifier;
 import model.Item;
 
 import java.util.ArrayList;
@@ -15,6 +16,8 @@ public class CreateBookByCategory {
         for (String ca : categories) {
           if(ca.contains(category)){
             BookByCategory bookByCategory = new BookByCategory();
+            for (IndustryIdentifier industryIdentifier: item.getVolumeInfo().getIndustryIdentifiers())
+            bookByCategory.setIsbn(industryIdentifier.getIdentifier());
             bookByCategory.setTitle(item.getVolumeInfo().getTitle());
             if (item.getVolumeInfo().getPublisher() != null)
               bookByCategory.setPublisher(item.getVolumeInfo().getPublisher());
