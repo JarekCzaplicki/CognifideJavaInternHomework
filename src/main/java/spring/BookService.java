@@ -1,7 +1,9 @@
 package spring;
 
+import model.AuthorRating;
 import model.BookByCategory;
 import model.BookByISBN;
+import tool.CreateAuthorRating;
 import tool.CreateBookByCategory;
 import tool.CreateBookByISBN;
 import tool.ReadJSON;
@@ -31,5 +33,10 @@ public class BookService {
     public List<BookByCategory> getBookByCategory(String category) {
         List<BookByCategory> book = CreateBookByCategory.bookByCategory(books, category);
         return book;
+    }
+
+    public List<AuthorRating> getAuthorRating() {
+        List<AuthorRating> rating = CreateAuthorRating.authorRating(books);
+        return rating;
     }
 }
