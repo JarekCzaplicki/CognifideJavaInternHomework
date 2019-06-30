@@ -3,6 +3,14 @@ package tool;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 public class DateToEpoch {
+
+  /**
+   * Converts date to Epoch format
+   *
+   * @param strDate
+   * @return Date in milliseconds since the 1970s
+   */
+
   public static Long dateToEpoh(String strDate) {
 
     strDate = strDate.replace("-","/");

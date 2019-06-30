@@ -7,6 +7,12 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 public class StringToJSON {
+
+  /**
+   * An auxiliary method to verify the correctness of returned json on endpoints
+   *
+   * @param dataString
+   */
   public static void stringToJSON(Object dataString){
     Gson gson = new Gson();
     String json = gson.toJson(dataString);

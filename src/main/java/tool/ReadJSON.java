@@ -12,7 +12,11 @@ import java.io.IOException;
  * @author Jarek Czaplicki
  */
 public class ReadJSON {
-
+    /**
+     * The method that loads json from a file and creates an object with books on it
+     *
+     * @return object containing books
+     */
     public static Books readJSON(){
         Gson gson = new GsonBuilder().create();
         Books books = new Books();
