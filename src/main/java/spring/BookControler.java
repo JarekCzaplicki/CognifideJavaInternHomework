@@ -63,7 +63,9 @@ public class BookControler {
      */
     @RequestMapping("/books/rating")
     public ResponseEntity<List<AuthorRating>> getAuthorRating(){
-        List<AuthorRating> book = bookService.getAuthorRating();
-        return new ResponseEntity<List<AuthorRating>>(book  == null ?HttpStatus.BAD_REQUEST : HttpStatus.OK);
+        List<AuthorRating> bookRating = bookService.getAuthorRating();
+        return new ResponseEntity<List<AuthorRating>>(bookRating, HttpStatus.OK);
     }
+
+
 }

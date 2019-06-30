@@ -1,11 +1,10 @@
-package tool;
+package controller;
 
 import com.google.gson.Gson;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+
 public class StringToJSON {
 
   /**

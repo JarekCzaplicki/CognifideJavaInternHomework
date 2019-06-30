@@ -1,4 +1,4 @@
-package tool;
+package controller;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class ReadJSON {
     /**
-     * The method that loads json from a file and creates an object with books on it
+     * The method that loads json from a file and creates an object with books
      *
      * @return object containing books
      */
