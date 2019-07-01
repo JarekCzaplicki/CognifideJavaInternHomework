@@ -1,10 +1,10 @@
 Building
 To build the project use following command:
-- `mvn clean package`
+- `mvn clean install`
 
 Running
 After building the application run following command to start it:
-`java -jar target/Cognifide-Java-Intern-Homework-0.2.0.jar -Ddatasource=misc/books.json`
+`java -jar target/Cognifide-Java-Intern-Homework-0.2.0.jar`
 
 
 If you want to display all the books rewritten from the source file:
